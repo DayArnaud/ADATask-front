@@ -1,0 +1,134 @@
+main {
+  width: 100vw;
+  height: 100vh;
+  margin-top: 80px;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: var(--clear-blue);
+  border-top-left-radius: 15%;
+  border-top-right-radius: 15%;
+}
+
+.top-bar {
+  width: 25px;
+}
+
+.top-bar hr {
+  border: 1px solid var(--main-blue);
+  background-color: var(--main-blue);
+}
+
+.sign-in-infos {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+  width: 60%;
+  height: auto;
+}
+
+h1 {
+  color: var(--main-blue);
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 80px 0 60px 0;
+}
+
+.name-container,
+.email-container,
+.password-container,
+.confirm-password-container {
+  width: 100%;
+  height: 3rem;
+  margin-bottom: 2rem;
+  color: var(--main-blue);
+}
+
+input {
+  border: none;
+  border-radius: 7px;
+  background-color: var(--inputs-background);
+  margin-left: 1rem;
+}
+
+.password-container,
+.confirm-password-container {
+  position: relative;
+}
+
+.name-input,
+.email-input,
+.password-input,
+.confirm-password-input {
+  height: 3rem;
+  padding-left: 10px;
+}
+
+.name-input {
+  width: 82%;
+}
+
+.email-input {
+  width: 83%;
+}
+
+.password-input,
+.confirm-password-input {
+  padding-right: 30px;
+}
+
+.password-input {
+  width: 81.8%;
+}
+
+.confirm-password-input {
+  width: 68%;
+}
+
+.eye-icon {
+  position: absolute;
+  cursor: pointer;
+  right: 10px;
+  top: 16px;
+  transform: translateY(-50%);
+  color: var(--main-blue);
+}
+
+button,
+.back-login-btn {
+  width: 100%;
+  height: 3rem;
+  border: none;
+  border-radius: 7px;
+  background-color: var(--main-blue);
+  color: var(--grey-text);
+  font-size: 1.4rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.sign-in-btn {
+  margin-top: 2rem;
+}
+
+.back-login-btn {
+  text-decoration: none;
+  padding-top: 0.4rem;
+}
+
+.bottom-bar {
+  width: 100px;
+  margin-top: 7rem;
+}
+
+.bottom-bar hr {
+  border: 1px solid var(--main-blue);
+  background-color: var(--main-blue);
+}
