@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Task</title>
+    <link rel="stylesheet" href="../../Styles/global.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <main>
+      <h1>Criar task</h1>
+      <section>
+        <form>
+          <input
+            type="text"
+            name="title"
+            id="title"
+            placeholder="Digite o título"
+          />
+          <input
+            type="text"
+            name="description"
+            id="description"
+            placeholder="Descrição opcional"
+          />
+          <div>
+            <i class="fas fa-calendar-alt"></i>
+            <input
+              type="date"
+              name="due-date"
+              id="due-date"
+              placeholder="Insira a data limite"
+            />
+          </div>
+          <div>
+            <i class="fas fa-tags"></i>
+            <input type="text" name="category" id="category" />
+          </div>
+          <div>
+            <i class="fas fa-arrow-right"></i>
+            <input
+              type="text"
+              name="subtask"
+              id="subtask"
+              placeholder="Adicionar subtarefa"
+            />
+          </div>
+        </form>
+        <button>
+          <i class="fas fa-plus-circle"></i>
+          Adicionar
+        </button>
+      </section>
+    </main>
+  </body>
+</html>
