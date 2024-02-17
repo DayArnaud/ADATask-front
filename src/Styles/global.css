@@ -1,1 +1,30 @@
-@import "@fortawesome/fontawesome-free/css/all.min.css";
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: "Open Sans", sans-serif;
+  background: linear-gradient(to bottom, #ffffff 25%, #e6e3e3 75%);
+}
+
+html,
+body {
+  height: 100%;
+  min-height: 100vh;
+}
+
+@media only screen and (min-width: 501px) {
+  body {
+    display: none;
+  }
+}

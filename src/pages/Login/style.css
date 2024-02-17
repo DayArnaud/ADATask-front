@@ -1,0 +1,8 @@
+.bottom-bar {
+  width: 100px;
+}
+
+.bottom-bar hr {
+  border: 1px solid #1a55b4;
+  background-color: #1a55b4;
+}
