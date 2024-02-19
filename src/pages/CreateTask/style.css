@@ -1,0 +1,158 @@
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 20px 0 20px 0;
+  margin-top: 80px;
+  flex: 1;
+  background-color: var(--inputs-background);
+  border-top-left-radius: 45px;
+  border-top-right-radius: 45px;
+}
+
+h1 {
+  text-align: center;
+  color: var(--main-blue);
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  padding: 2rem 0;
+  margin: 5rem 0;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1.5rem;
+  width: 80%;
+  margin-bottom: 4rem;
+}
+
+input {
+  border: none;
+  border-radius: 4px;
+  background-color: var(--clear-blue);
+  margin-left: 1rem;
+  padding: 1rem;
+  width: 93%;
+  height: 4rem;
+  color: var(--main-blue);
+}
+
+input::placeholder {
+  color: var(--main-blue);
+}
+
+select {
+  border: none;
+  border-radius: 4px;
+  background-color: var(--clear-blue);
+  margin-left: 1rem;
+  padding: 1rem;
+  width: 93%;
+  height: 4rem;
+  color: var(--main-blue);
+}
+
+.title {
+  font-size: 2rem;
+}
+
+.date-input,
+.category-input,
+.subtask-input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 0.2rem;
+  padding: 0 1rem;
+}
+
+.icon {
+  font-size: 1.5rem;
+  color: var(--main-blue);
+}
+
+button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  width: 60%;
+  height: 4rem;
+  border-radius: 7px;
+  padding: 20px;
+  background-color: var(--main-blue);
+  color: var(--usual-white);
+}
+
+.icon-btn {
+  font-size: 1.5rem;
+  color: var(--usual-white);
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+  height: auto;
+  padding-top: 20px;
+}
+
+.footer-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 120px;
+  height: 4rem;
+  padding: 1rem;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1.5rem;
+}
+
+.exit-btn {
+  color: var(--usual-white);
+  background-color: var(--salmon-category);
+}
+
+.back-btn {
+  color: var(--usual-white);
+  background-color: var(--yellow-category);
+}
+
+.add-btn {
+  color: var(--usual-white);
+  background-color: var(--main-blue);
+}
+
+.footer-icon {
+  margin-left: 1rem;
+  font-size: 1.5rem;
+  color: var(--usual-white);
+}
+
+button {
+  border: none;
+  background-color: var(--);
+}

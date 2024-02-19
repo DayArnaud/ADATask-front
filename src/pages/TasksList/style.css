@@ -1,0 +1,90 @@
+main {
+  width: 100%;
+  padding: 40px;
+  flex: 1;
+}
+
+h1 {
+  text-align: center;
+  color: var(--main-blue);
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 5rem 0;
+}
+
+h2 {
+  align-self: flex-start;
+  font-weight: 500;
+  color: var(--main-blue);
+  margin-bottom: 1rem;
+}
+
+.task-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4rem;
+  width: 80%;
+  padding: 0.5rem 1.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid var(--main-blue);
+  border-radius: 7px;
+  background-color: var(--clear-blue);
+}
+
+h3,
+h4 {
+  color: var(--main-blue);
+}
+
+.trash-icon {
+  font-size: 1.5rem;
+  color: var(--main-blue);
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+  height: auto;
+  padding: 20px;
+}
+
+.footer-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 2.5rem;
+  color: var(--main-blue);
+  text-decoration: none;
+  text-align: center;
+  background-color: var(--clear-blue);
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1.5rem;
+}
+
+.exit-btn {
+  color: var(--usual-white);
+  background-color: var(--salmon-category);
+}
+
+.add-btn {
+  color: var(--usual-white);
+  background-color: var(--main-blue);
+}
+
+.footer-icon {
+  margin-left: 1rem;
+  font-size: 1.5rem;
+  color: var(--usual-white);
+}

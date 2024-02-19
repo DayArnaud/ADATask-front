@@ -17,6 +17,7 @@
       <section>
         <form>
           <input
+            class="title"
             type="text"
             name="title"
             id="title"
@@ -28,8 +29,8 @@
             id="description"
             placeholder="Descrição opcional"
           />
-          <div>
-            <i class="fas fa-calendar-alt"></i>
+          <div class="date-input">
+            <i class="fas fa-calendar-alt icon"></i>
             <input
               type="date"
               name="due-date"
@@ -37,25 +38,47 @@
               placeholder="Insira a data limite"
             />
           </div>
-          <div>
-            <i class="fas fa-tags"></i>
-            <input type="text" name="category" id="category" />
+          <div class="category-input">
+            <i class="fas fa-tags icon"></i>
+            <select name="dropdown" id="dropdown">
+              <option value="" selected>Escolha uma opção</option>
+              <option value="opcao1">Trabalho</option>
+              <option value="opcao2">Estudos</option>
+              <option value="opcao3">Lazer</option>
+            </select>
           </div>
-          <div>
-            <i class="fas fa-arrow-right"></i>
+          <div class="subtask-input">
+            <i class="fas fa-arrow-right icon"></i>
             <input
               type="text"
               name="subtask"
               id="subtask"
-              placeholder="Adicionar subtarefa"
+              placeholder="Adicione subtarefa e clique 'Enter'"
             />
           </div>
         </form>
         <button>
-          <i class="fas fa-plus-circle"></i>
-          Adicionar
+          Adicionar e visualizar
+          <i class="fas fa-plus-circle icon-btn"></i>
         </button>
       </section>
+
+      <footer>
+        <a class="footer-btn exit-btn" href="../Home/">
+          Sair
+          <i class="fas fa-times-circle footer-icon"></i>
+        </a>
+
+        <a class="footer-btn back-btn" href="../TasksList/tasksList.html">
+          Voltar
+          <i class="fas fa-arrow-circle-left footer-icon"></i>
+        </a>
+
+        <a class="footer-btn add-btn" href="../CreateTask/create-task.html">
+          Adicionar task
+          <i class="fas fa-plus-circle footer-icon"></i>
+        </a>
+      </footer>
     </main>
   </body>
 </html>

@@ -7,6 +7,8 @@
   --inputs-background: #cadcf7;
   --grey-text: #f6f5f3;
   --usual-white: #fff;
+  --yellow-category: #fec857;
+  --salmon-category: #fe746f;
 }
 
 * {
@@ -26,7 +28,6 @@ body {
   background: linear-gradient(to bottom, #fff 25%, var(--grey-background) 75%);
 }
 
-html,
 body {
   height: 100%;
   min-height: 100vh;
