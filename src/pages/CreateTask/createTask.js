@@ -42,12 +42,14 @@ document.addEventListener("DOMContentLoaded", (e) => {
     e.preventDefault();
 
     if (titleInput.value && dateInput.value && categorySelect.value) {
-      const taskData = {
+      const newTaskData = {
+        id: "checkbox" + Date.now(),
         title: titleInput.value,
         description: descriptionInput.value,
         date: dateInput.value,
         category: categorySelect.options[categorySelect.selectedIndex].text,
         subtasks: [],
+        completed: false,
       };
 
       document.querySelectorAll(".subtask-item").forEach((subtaskElement) => {
@@ -55,12 +57,17 @@ document.addEventListener("DOMContentLoaded", (e) => {
         const isCompleted = subtaskElement.querySelector(
           "input[type='checkbox']"
         ).checked;
-        taskData.subtasks.push({ text: subtaskText, completed: isCompleted });
+        newTaskData.subtasks.push({
+          text: subtaskText,
+          completed: isCompleted,
+        });
       });
 
-      localStorage.setItem("currentTask", JSON.stringify(taskData));
+      const tasksList = JSON.parse(localStorage.getItem("tasksList")) || [];
+      tasksList.push(newTaskData);
+      localStorage.setItem("tasksList", JSON.stringify(tasksList));
 
-      window.location.href = "../ViewTask/viewTask.html";
+      window.location.href = "../TasksList/tasksList.html";
     } else {
       console.log(
         "Por favor, preencha ao menos o título, a data e a categoria."

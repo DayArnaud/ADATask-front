@@ -32,6 +32,7 @@ h2 {
   justify-content: space-between;
   gap: 4rem;
   width: 80%;
+  min-height: 4rem;
   padding: 0.5rem 1.5rem;
   margin-bottom: 1rem;
   border: 1px solid var(--main-blue);
@@ -108,4 +109,51 @@ footer {
   margin-left: 1rem;
   font-size: 1.5rem;
   color: var(--usual-white);
+}
+
+#modal-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 999;
+  display: none;
+}
+
+#delete-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--usual-white);
+  padding: 20px;
+  z-index: 1000;
+  display: none;
+  border-radius: 7px;
+}
+
+.modal-title {
+  text-align: center;
+}
+
+.btn-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.delete-cancel {
+  border: none;
+  color: var(--usual-white);
+  background-color: var(--yellow-category);
+}
+
+.delete-confirm {
+  border: none;
+  color: var(--usual-white);
+  background-color: var(--salmon-category);
 }

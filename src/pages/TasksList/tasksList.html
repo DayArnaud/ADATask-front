@@ -14,31 +14,11 @@
   <body>
     <main>
       <h1>Tasks</h1>
-      <section>
+      <section id="tasks-todo">
         <h2>A FAZER</h2>
-        <div class="task-card">
-          <input type="checkbox" name="" id="" />
-          <div class="about-task">
-            <h3>Título task 3</h3>
-            <h4>Descrição opcional</h4>
-          </div>
-          <button class="delete-btn">
-            <i class="fas fa-trash trash-icon"></i>
-          </button>
-        </div>
       </section>
-      <section>
+      <section id="tasks-completed">
         <h2>CONCLUÍDAS</h2>
-        <div class="task-card">
-          <input type="checkbox" name="" id="" />
-          <div class="about-task">
-            <h3>Título task 3</h3>
-            <h4>Descrição opcional</h4>
-          </div>
-          <button class="delete-btn">
-            <i class="fas fa-trash trash-icon"></i>
-          </button>
-        </div>
       </section>
     </main>
 
@@ -53,5 +33,16 @@
         <i class="fas fa-plus-circle footer-icon"></i>
       </a>
     </footer>
+
+    <div id="modal-background" style="display: none"></div>
+    <div id="delete-modal" style="display: none">
+      <h2 class="modal-title">Deseja realmente excluir essa tarefa?</h2>
+      <div class="btn-container">
+        <button class="delete-confirm" id="delete-confirm">Excluir</button>
+        <button class="delete-cancel" id="delete-cancel">Cancelar</button>
+      </div>
+    </div>
+
+    <script src="./tasksList.js"></script>
   </body>
 </html>

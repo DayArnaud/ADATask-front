@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
   let passwordInput = document.getElementById("password");
   let confirmPasswordInput = document.getElementById("confirm-password");
   let toggleIcons = document.querySelectorAll(".eye-icon");
@@ -15,8 +15,8 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   };
 
-  toggleIcons.forEach((icon) => {
-    icon.addEventListener("click", () => {
+  toggleIcons.forEach(function (icon) {
+    icon.addEventListener("click", function () {
       let inputId = this.dataset.for;
       let input = document.getElementById(inputId);
       togglePasswordVisibility(input, this);
