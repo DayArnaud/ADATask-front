@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
@@ -11,5 +11,72 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
     />
   </head>
-  <body></body>
+  <body>
+    <main>
+      <h1>Editar task</h1>
+      <section>
+        <form id="edit-form">
+          <input
+            class="title"
+            type="text"
+            name="title"
+            id="title"
+            placeholder="Digite o título"
+            required
+          />
+          <input
+            type="text"
+            name="description"
+            id="description"
+            placeholder="Descrição opcional"
+          />
+          <div class="date-input">
+            <i class="fas fa-calendar-alt icon"></i>
+            <input
+              type="date"
+              name="due-date"
+              id="due-date"
+              placeholder="Insira a data limite"
+              required
+            />
+          </div>
+          <div class="category-input">
+            <i class="fas fa-tags icon"></i>
+            <select name="dropdown" id="dropdown" required>
+              <option value="" selected>Escolha uma categoria</option>
+              <option value="opcao1">Trabalho</option>
+              <option value="opcao2">Estudos</option>
+              <option value="opcao3">Lazer</option>
+            </select>
+          </div>
+          <div class="subtask-input">
+            <i class="fas fa-arrow-right icon"></i>
+            <input
+              type="text"
+              name="subtask"
+              id="subtask"
+              placeholder="Adicione subtarefa e clique 'Enter'"
+            />
+          </div>
+          <button type="submit" class="save-btn">
+            Adicionar task e visualizar
+            <i class="fas fa-plus-circle icon-btn"></i>
+          </button>
+        </form>
+      </section>
+
+      <footer>
+        <a class="footer-btn back-btn" href="../TasksList/tasksList.html">
+          Ver lista
+          <i class="fas fa-arrow-circle-left footer-icon"></i>
+        </a>
+
+        <a class="footer-btn exit-btn" href="../Home/">
+          Sair
+          <i class="fas fa-times-circle footer-icon"></i>
+        </a>
+      </footer>
+    </main>
+    <script src="./editTask.js"></script>
+  </body>
 </html>

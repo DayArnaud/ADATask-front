@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
   const dateInput = document.getElementById("due-date");
   const categorySelect = document.getElementById("dropdown");
   const subtaskInput = document.getElementById("subtask");
+  const saveButton = document.querySelector(".add-btn");
 
   subtaskInput.addEventListener("keypress", (e) => {
     if (e.key === "Enter") {
@@ -65,5 +66,18 @@ document.addEventListener("DOMContentLoaded", (e) => {
         "Por favor, preencha ao menos o título, a data e a categoria."
       );
     }
+  });
+
+  saveButton.addEventListener("click", () => {
+    const updatedTaskData = {
+      title: titleInput.value,
+      description: descriptionInput.value,
+      date: dateInput.value,
+      category: categorySelect.value,
+      subtasks: [],
+    };
+
+    localStorage.setItem("currentTask", JSON.stringify(updatedTaskData));
+    window.location.href = "../TasksList/tasksList.html";
   });
 });
