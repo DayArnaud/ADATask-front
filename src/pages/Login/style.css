@@ -81,7 +81,7 @@ input {
 .eye-icon {
   position: absolute;
   cursor: pointer;
-  right: 10px;
+  right: 20px;
   top: 16px;
   transform: translateY(-50%);
   color: var(--main-blue);

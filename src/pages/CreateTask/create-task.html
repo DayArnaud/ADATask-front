@@ -22,6 +22,7 @@
             name="title"
             id="title"
             placeholder="Digite o título"
+            required
           />
           <input
             type="text"
@@ -36,12 +37,13 @@
               name="due-date"
               id="due-date"
               placeholder="Insira a data limite"
+              required
             />
           </div>
           <div class="category-input">
             <i class="fas fa-tags icon"></i>
-            <select name="dropdown" id="dropdown">
-              <option value="" selected>Escolha uma opção</option>
+            <select name="dropdown" id="dropdown" required>
+              <option value="" selected>Escolha uma categoria</option>
               <option value="opcao1">Trabalho</option>
               <option value="opcao2">Estudos</option>
               <option value="opcao3">Lazer</option>
@@ -56,11 +58,11 @@
               placeholder="Adicione subtarefa e clique 'Enter'"
             />
           </div>
+          <button type="submit">
+            Adicionar task e visualizar
+            <i class="fas fa-plus-circle icon-btn"></i>
+          </button>
         </form>
-        <button>
-          Adicionar e visualizar
-          <i class="fas fa-plus-circle icon-btn"></i>
-        </button>
       </section>
 
       <footer>
@@ -73,12 +75,8 @@
           Voltar
           <i class="fas fa-arrow-circle-left footer-icon"></i>
         </a>
-
-        <a class="footer-btn add-btn" href="../CreateTask/create-task.html">
-          Adicionar task
-          <i class="fas fa-plus-circle footer-icon"></i>
-        </a>
       </footer>
     </main>
+    <script src="./createTask.js"></script>
   </body>
 </html>

@@ -1,0 +1,122 @@
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 20px 0 20px 0;
+  margin-top: 80px;
+  flex: 1;
+  background-color: var(--inputs-background);
+  border-top-left-radius: 45px;
+  border-top-right-radius: 45px;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 4rem;
+  width: 90%;
+  height: 90%;
+  padding: 1rem;
+}
+
+h1 {
+  text-align: center;
+  align-self: center;
+  color: var(--main-blue);
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+h2 {
+  color: var(--main-blue);
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.date {
+  font-weight: 500;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+  height: auto;
+}
+
+.btn-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.footer-btn {
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20rem;
+  height: 4rem;
+  padding: 0.5rem;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1.5rem;
+}
+
+.exit-btn {
+  color: var(--usual-white);
+  background-color: var(--salmon-category);
+}
+
+.back-btn,
+.edit-btn {
+  color: var(--usual-white);
+  background-color: var(--yellow-category);
+}
+
+.add-btn {
+  color: var(--usual-white);
+  background-color: var(--main-blue);
+}
+
+.footer-icon {
+  margin-left: 1rem;
+  font-size: 1.5rem;
+  color: var(--usual-white);
+}
+
+.completed {
+  text-decoration: line-through;
+}
+
+.subtask-item {
+  display: flex;
+  align-items: center;
+  height: 2rem;
+  margin-bottom: 2rem;
+}
+
+.subtask-checkbox {
+  width: 2rem;
+  height: 1.8rem;
+  margin-right: 0.5rem;
+}
+
+.subtask-label {
+  font-size: 1.5rem;
+  color: var(--main-blue);
+}

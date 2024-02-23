@@ -5,5 +5,5 @@ document.getElementById("footer-icon").addEventListener("click", function (e) {
 
   setTimeout(function () {
     window.location.href = e.target.closest("a").href;
-  }, 500);
+  }, 300);
 });

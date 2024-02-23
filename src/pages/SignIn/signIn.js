@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
   let confirmPasswordInput = document.getElementById("confirm-password");
   let toggleIcons = document.querySelectorAll(".eye-icon");
 
-  function togglePasswordVisibility(input, icon) {
+  const togglePasswordVisibility = (input, icon) => {
     if (input.type === "password") {
       input.type = "text";
       icon.classList.remove("fa-eye-slash");
@@ -13,10 +13,10 @@ document.addEventListener("DOMContentLoaded", function () {
       icon.classList.add("fa-eye-slash");
       icon.classList.remove("fa-eye");
     }
-  }
+  };
 
   toggleIcons.forEach((icon) => {
-    icon.addEventListener("click", function () {
+    icon.addEventListener("click", () => {
       let inputId = this.dataset.for;
       let input = document.getElementById(inputId);
       togglePasswordVisibility(input, this);
@@ -24,12 +24,12 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   let form = document.querySelector("form");
-  form.addEventListener("submit", function (event) {
-    event.preventDefault();
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
 
     if (passwordInput.value === confirmPasswordInput.value) {
       alert("As senhas coincidem.");
-      window.location.href = "../TasksList/tasksList.html";
+      window.location.href = "../Login/login.html";
     } else {
       alert("As senhas não coincidem. Verifique e corrija antes de seguir.");
     }
