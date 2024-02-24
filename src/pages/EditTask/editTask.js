@@ -32,6 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
     e.preventDefault();
 
     const updatedTaskData = {
+      id: taskToEdit.id,
       title: titleInput.value,
       description: descriptionInput.value,
       date: dateInput.value,
@@ -46,6 +47,13 @@ document.addEventListener("DOMContentLoaded", () => {
       ).checked;
       updatedTaskData.subtasks.push({ text, completed });
     });
+    let tasksList = JSON.parse(localStorage.getItem("tasksList")) || [];
+    const taskIndex = tasksList.findIndex((task) => task.id === taskToEdit.id);
+    if (taskIndex !== -1) {
+      tasksList[taskIndex] = updatedTaskData;
+    }
+
+    localStorage.setItem("tasksList", JSON.stringify(tasksList));
 
     localStorage.setItem("currentTask", JSON.stringify(updatedTaskData));
     window.location.href = "../ViewTask/viewTask.html";
