@@ -31,7 +31,9 @@ document.addEventListener("DOMContentLoaded", () => {
   tasksList.forEach((task) => {
     const taskCard = document.createElement("div");
     taskCard.classList.add("task-card");
-    taskCard.style.backgroundColor = getBackgroundColor(task.category);
+    taskCard.style.backgroundColor = task.isCompleted
+      ? "var(--grey-background)"
+      : getBackgroundColor(task.category);
 
     const checkbox = document.createElement("input");
     checkbox.type = "checkbox";
@@ -56,8 +58,8 @@ document.addEventListener("DOMContentLoaded", () => {
       taskCard.style.backgroundColor = task.isCompleted
         ? "var(--grey-background)"
         : getBackgroundColor(task.category);
-
       taskCard.remove();
+
       if (task.isCompleted) {
         tasksCompleted.appendChild(taskCard);
       } else {
