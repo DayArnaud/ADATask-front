@@ -99,10 +99,6 @@ footer {
   color: var(--usual-white);
 }
 
-.completed {
-  text-decoration: line-through;
-}
-
 .subtask-item {
   display: flex;
   align-items: center;

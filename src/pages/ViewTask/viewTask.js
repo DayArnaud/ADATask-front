@@ -40,6 +40,16 @@ document.addEventListener("DOMContentLoaded", (e) => {
         label.style.textDecoration = "line-through";
       }
 
+      checkbox.addEventListener("change", () => {
+        if (checkbox.checked) {
+          label.style.textDecoration = "line-through";
+        } else {
+          label.style.textDecoration = "none";
+        }
+        subtask.completed = checkbox.checked;
+        localStorage.setItem("currentTask", JSON.stringify(taskData));
+      });
+
       subtaskItem.appendChild(checkbox);
       subtaskItem.appendChild(label);
       subtaskListElement.appendChild(subtaskItem);

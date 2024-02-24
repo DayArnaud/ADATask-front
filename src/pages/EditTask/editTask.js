@@ -1,24 +1,3 @@
-const createSubtaskElement = (text, completed) => {
-  const subtaskItem = document.createElement("div");
-  subtaskItem.classList.add("subtask-item");
-
-  const checkbox = document.createElement("input");
-  checkbox.type = "checkbox";
-  checkbox.classList.add("subtask-checkbox");
-  checkbox.checked = completed;
-  checkbox.id = "checkbox-" + Date.now();
-
-  const label = document.createElement("label");
-  label.textContent = text;
-  label.htmlFor = checkbox.id;
-  label.classList.add("subtask-label");
-
-  subtaskItem.appendChild(checkbox);
-  subtaskItem.appendChild(label);
-
-  return subtaskItem;
-};
-
 document.addEventListener("DOMContentLoaded", () => {
   const titleInput = document.getElementById("title");
   const descriptionInput = document.getElementById("description");
@@ -36,6 +15,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     taskToEdit.subtasks.forEach((subtask) => {
       const subtaskItem = createSubtaskElement(subtask.text, subtask.completed);
+      if (subtask.completed) {
+        subtaskItem.querySelector("label").style.textDecoration =
+          "line-through";
+      }
       form.insertBefore(subtaskItem, subtaskInput.parentNode);
     });
   }
@@ -91,3 +74,24 @@ document.addEventListener("DOMContentLoaded", () => {
       }
   });
 });
+
+const createSubtaskElement = (text, completed) => {
+  const subtaskItem = document.createElement("div");
+  subtaskItem.classList.add("subtask-item");
+
+  const checkbox = document.createElement("input");
+  checkbox.type = "checkbox";
+  checkbox.classList.add("subtask-checkbox");
+  checkbox.checked = completed;
+  checkbox.id = "checkbox-" + Date.now();
+
+  const label = document.createElement("label");
+  label.textContent = text;
+  label.htmlFor = checkbox.id;
+  label.classList.add("subtask-label");
+
+  subtaskItem.appendChild(checkbox);
+  subtaskItem.appendChild(label);
+
+  return subtaskItem;
+};
