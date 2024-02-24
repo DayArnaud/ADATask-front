@@ -10,12 +10,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const showModal = () => {
     document.getElementById("modal-background").style.display = "block";
-    document.getElementById("delete-modal").style.display = "block";
+    deleteModal.style.display = "block";
   };
 
   const hideModal = () => {
     document.getElementById("modal-background").style.display = "none";
-    document.getElementById("delete-modal").style.display = "none";
+    deleteModal.style.display = "none";
   };
 
   const deleteTask = () => {
