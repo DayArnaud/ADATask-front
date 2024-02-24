@@ -11,7 +11,12 @@ document.addEventListener("DOMContentLoaded", () => {
     titleInput.value = taskToEdit.title;
     descriptionInput.value = taskToEdit.description || "";
     dateInput.value = taskToEdit.date;
-    categorySelect.value = taskToEdit.category || "";
+
+    Array.from(categorySelect.options).forEach((option) => {
+      if (option.text === taskToEdit.category) {
+        option.selected = true;
+      }
+    });
 
     taskToEdit.subtasks.forEach((subtask) => {
       const subtaskItem = createSubtaskElement(subtask.text, subtask.completed);
